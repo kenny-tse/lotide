@@ -20,9 +20,14 @@ const eqArrays = function (arrayOne, ArrayTwo) {
   return true;
 };
 
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function (object1, object2) {
+
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
+    return false
+  }
 
   for (const key in object1) {
 
@@ -56,3 +61,4 @@ assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
+
