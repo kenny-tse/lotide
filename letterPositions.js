@@ -1,5 +1,5 @@
-const assertArraysEqual = function(arrayOne, ArrayTwo) {
-  
+const assertArraysEqual = function (arrayOne, ArrayTwo) {
+
   if (eqArrays(arrayOne, ArrayTwo)) {
     console.log("✅✅✅ Assertion Passed");
   } else {
@@ -7,7 +7,7 @@ const assertArraysEqual = function(arrayOne, ArrayTwo) {
   }
 };
 
-const eqArrays = function(arrayOne, ArrayTwo) {
+const eqArrays = function (arrayOne, ArrayTwo) {
   if (arrayOne.length !== ArrayTwo.length) {
     return false;
   } else {
@@ -20,8 +20,8 @@ const eqArrays = function(arrayOne, ArrayTwo) {
   return true;
 };
 
-const letterPositions = function(sentence) {
-  
+const letterPositions = function (sentence) {
+
   const results = {};
 
   let stringToCount = [];
@@ -29,9 +29,9 @@ const letterPositions = function(sentence) {
   for (let i = 0; i < sentence.length; i++) {
     stringToCount.push(sentence[i]);
   }
-  
+
   for (let i = 0; i < stringToCount.length; i++) {
-    
+
     if (stringToCount[i] !== " ") {
 
       if (results[stringToCount[i]]) {
@@ -52,5 +52,7 @@ const letterPositions = function(sentence) {
 
 assertArraysEqual(letterPositions("hello").h, [0]);
 assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2,3]);
+assertArraysEqual(letterPositions("hello").l, [2, 3]);
 assertArraysEqual(letterPositions("hello").o, [4]);
+
+module.exports = letterPositions;

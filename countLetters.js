@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
 
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(someString) {
+const countLetters = function (someString) {
 
   const lettersToOutput = {};
   let stringWithoutSpaces = someString.replace(/\s+/g, '');
@@ -18,7 +18,7 @@ const countLetters = function(someString) {
   }
 
   for (let i = 0; i < stringToSort.length; i++) {
-    
+
     //if it already exists
     if (lettersToOutput[stringToSort[i]]) {
       lettersToOutput[stringToSort[i]] = lettersToOutput[stringToSort[i]] + 1;
@@ -31,6 +31,8 @@ const countLetters = function(someString) {
   return lettersToOutput;
 
 };
+
+module.exports = countLetters;
 
 countLetters("lighthouse in the house");
 

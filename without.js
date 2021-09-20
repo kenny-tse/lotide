@@ -1,5 +1,5 @@
-const assertArraysEqual = function(arrayOne, ArrayTwo) {
-  
+const assertArraysEqual = function (arrayOne, ArrayTwo) {
+
   if (eqArrays(arrayOne, ArrayTwo)) {
     console.log("✅✅✅ Assertion Passed");
   } else {
@@ -7,7 +7,7 @@ const assertArraysEqual = function(arrayOne, ArrayTwo) {
   }
 };
 
-const eqArrays = function(arrayOne, ArrayTwo) {
+const eqArrays = function (arrayOne, ArrayTwo) {
   if (arrayOne.length !== ArrayTwo.length) {
     return false;
   } else {
@@ -20,13 +20,13 @@ const eqArrays = function(arrayOne, ArrayTwo) {
   return true;
 };
 
-const without = function(source , itemsToRemove) {
+const without = function (source, itemsToRemove) {
 
   let arrayToOutput = [];
   let canAdd = true;
 
   for (let indexSource = 0; indexSource < source.length; indexSource++) {
-    
+
     canAdd = true;
 
     for (let removeIndex = 0; removeIndex < itemsToRemove.length; removeIndex++) {
@@ -52,3 +52,5 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 //Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+module.exports = without;

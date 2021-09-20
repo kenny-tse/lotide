@@ -1,5 +1,5 @@
-const assertArraysEqual = function(arrayOne, ArrayTwo) {
-  
+const assertArraysEqual = function (arrayOne, ArrayTwo) {
+
   if (eqArrays(arrayOne, ArrayTwo)) {
     console.log("✅✅✅ Assertion Passed");
   } else {
@@ -7,7 +7,7 @@ const assertArraysEqual = function(arrayOne, ArrayTwo) {
   }
 };
 
-const eqArrays = function(arrayOne, ArrayTwo) {
+const eqArrays = function (arrayOne, ArrayTwo) {
   if (arrayOne.length !== ArrayTwo.length) {
     return false;
   } else {
@@ -20,11 +20,11 @@ const eqArrays = function(arrayOne, ArrayTwo) {
   return true;
 };
 
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
 
   let arrayToStore = [];
 
-  for (let i = 0; i < array.length; i ++) {
+  for (let i = 0; i < array.length; i++) {
 
     if (callback(array[i]) === false) {
       arrayToStore.push(array[i]);
@@ -51,5 +51,7 @@ console.log(results2);
 // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
 
 
-assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ]);
-assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
+assertArraysEqual(results1, [1, 2, 5, 7, 2]);
+assertArraysEqual(results2, ['I\'ve', 'been', 'to', 'Hollywood']);
+
+module.exports = takeUntil;
